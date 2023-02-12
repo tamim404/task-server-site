@@ -39,9 +39,8 @@ app.use(limiter)
 
 
 // //Database Connection
-let URL=process.env.MONGOOSE_URL || "mongodb+srv://<username>:<password>@cluster0.jmg0kt7.mongodb.net/TASK?retryWrites=true&w=majority";
-let OPTION={user:"tamim404",pass:"tamim404",autoIndex:true}
-mongoose.set('strictQuery', false);
+let URL="mongodb+srv://tamim404:tamim404@cluster0.jmg0kt7.mongodb.net/TASK";
+let OPTION={autoIndex:true}
 mongoose.connect(URL,OPTION,(error)=>{
     if(error) {
         console.log(error)
