@@ -16,7 +16,7 @@ const hpp= require("hpp");
 
 
 //Database
-const mongoose= require("mongoose");
+// const mongoose= require("mongoose");
 app.use(express.static("client/build"));
 
 
@@ -40,16 +40,16 @@ app.use(limiter)
 
 
 // //Database Connection
-let URL=process.env.MONGO_URL||"mongodb+srv://tamim404:tamim404@cluster0.jmg0kt7.mongodb.net/TASK";
-let OPTION={autoIndex:true}
-mongoose.set('strictQuery', false);
-mongoose.connect(URL,OPTION,(error)=>{
-    if(error) {
-        console.log(error)
-    }else {
-        console.log("Database connect success")
-    }
-});
+// let URL=process.env.MONGO_URL||"mongodb+srv://tamim404:tamim404@cluster0.jmg0kt7.mongodb.net/TASK";
+// let OPTION={autoIndex:true}
+// mongoose.set('strictQuery', false);
+// mongoose.connect(URL,OPTION,(error)=>{
+//     if(error) {
+//         console.log(error)
+//     }else {
+//         console.log("Database connect success")
+//     }
+// });
 
 
 
