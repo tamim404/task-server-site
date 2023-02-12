@@ -1,6 +1,7 @@
 const express = require("express");
 const router = require("./src/routes/api");
 const path= require("path");
+
 const app = new express();
 
 
@@ -39,7 +40,7 @@ app.use(limiter)
 
 
 // //Database Connection
-let URL="mongodb+srv://tamim404:tamim404@cluster0.jmg0kt7.mongodb.net/TASK";
+let URL=process.env.MONGO_URL||"mongodb+srv://tamim404:tamim404@cluster0.jmg0kt7.mongodb.net/TASK";
 let OPTION={autoIndex:true}
 mongoose.set('strictQuery', false);
 mongoose.connect(URL,OPTION,(error)=>{
